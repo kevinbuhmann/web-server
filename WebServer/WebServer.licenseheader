@@ -1,0 +1,9 @@
+extensions: designer.cs generated.cs
+extensions: .cs .cpp .h
+/**************************************************
+ * Web Server                                     *
+ * Author: Kevin Phelps                           *
+ * https://github.com/kevinphelps/WebServer       *
+ * http://kevinphelps.me/                         *
+ * Copyright 2014 Kevin Phelps                    *
+ **************************************************/

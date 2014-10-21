@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{716833C3-BC3D-4020-8DC7-1911300C6124}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebServer</RootNamespace>
+    <AssemblyName>WebServer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="RequestExcecutor.cs" />
+    <Compile Include="ResponseInfo.cs" />
+    <Compile Include="RequestInfo.cs" />
+    <Compile Include="WebServerProgram.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestHandler.cs" />
+    <Compile Include="ServerSettings.cs" />
+    <Compile Include="SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="php\phar.phar.bat" />
+    <None Include="php\pharcommand.phar" />
+    <None Include="WebServer.licenseheader" />
+    <None Include="web\clear_guestbook.php" />
+    <None Include="web\delete_uploads.php" />
+    <None Include="web\name.php" />
+    <None Include="web\php_example.php" />
+    <None Include="web\sign_guestbook.php" />
+    <None Include="web\upload_file.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="php\glib-2.dll" />
+    <Content Include="php\gmodule-2.dll" />
+    <Content Include="php\icuin51.dll" />
+    <Content Include="php\icuio51.dll" />
+    <Content Include="php\icule51.dll" />
+    <Content Include="php\iculx51.dll" />
+    <Content Include="php\icutest51.dll" />
+    <Content Include="php\icutu51.dll" />
+    <Content Include="php\icuuc51.dll" />
+    <Content Include="php\install.txt" />
+    <Content Include="php\libeay32.dll" />
+    <Content Include="php\libenchant.dll" />
+    <Content Include="php\libenchant_ispell.dll" />
+    <Content Include="php\libenchant_myspell.dll" />
+    <Content Include="php\libpq.dll" />
+    <Content Include="php\libsasl.dll" />
+    <Content Include="php\license.txt" />
+    <Content Include="php\msvcr110.dll" />
+    <Content Include="php\news.txt" />
+    <Content Include="php\php-cgi.exe" />
+    <Content Include="php\php-win.exe" />
+    <Content Include="php\php.exe" />
+    <Content Include="php\php.gif" />
+    <Content Include="php\php5.dll" />
+    <Content Include="php\readme-redist-bins.txt" />
+    <Content Include="php\snapshot.txt" />
+    <Content Include="php\ssleay32.dll" />
+    <Content Include="webserver.ico" />
+    <Content Include="web\apples.jpg" />
+    <Content Include="web\index.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
